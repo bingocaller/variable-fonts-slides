@@ -1,0 +1,9 @@
+{
+  "name": "variable-fonts-slides",
+  "version": "1.0.0",
+  "description": "My slides about variable fonts for a lightning talk at Issuu, November 2019",
+  "main": "index.js",
+  "author": "jnj@issuu.com",
+  "license": "MIT",
+  "private": false
+}
