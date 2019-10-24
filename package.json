@@ -5,5 +5,8 @@
   "main": "index.js",
   "author": "jnj@issuu.com",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "devDependencies": {
+    "mdx-deck": "^3.0.13"
+  }
 }
