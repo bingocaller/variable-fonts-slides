@@ -1,14 +1,14 @@
 export default {
     fonts: {
-        body: '"Noto Sans", "Open Sans", Roboto, sans-serif',
+        body: '"League Spartan Variable", "Open Sans", "Avenir Next", "Helvetica Neue", Roboto, sans-serif',
         monospace: '"FuraCode Nerd Font", "Roboto Mono", monospace',
     },
     fontWeights: {
         body: 400,
-        heading: 500,
+        heading: 700,
     },
     colors: {
-        text: '#535353',
+        text: '#333',
         background: '#fff',
         primary: '#f26f61',
     },

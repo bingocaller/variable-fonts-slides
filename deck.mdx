@@ -1,32 +1,73 @@
-import { Appear } from 'mdx-deck';
+import { Invert, FullScreenCode } from 'mdx-deck';
 import { prism } from '@mdx-deck/themes';
 
 import issuu from './theme';
-import IssuuLayout from './issuu-layout';
+
+import IssuuLogo from './components/issuu-logo.jsx';
+import VariableHeadline from './components/variable-headline.jsx';
 
 export const themes = [issuu, prism];
 
-<IssuuLayout>
+<IssuuLogo />
 
-# Variable fonts, yo!
-
-## Straight 🔥!
-
-</IssuuLayout>
+<h1 style="text-transform: uppercase;">Variable fonts</h1>
 
 ---
 
-# More pages
-## Why not?
+<Invert>
+
+<IssuuLogo inverted />
+
+# What is it?
+
+<p style="text-align: center; padding: 0 2rem;"><strong>OpenType variable fonts</strong> are an extension to the OpenType specification, introduced in OpenType 1.8.</p>
+
+</Invert>
 
 ---
 
-# Code?
+<Invert>
+
+<IssuuLogo inverted />
+
+# What the heck is OpenType?
+
+<p style="text-align: center; padding: 0 2rem;"><strong>OpenType</strong> is a format for scalable computer fonts. It was built on its predecessor TrueType, which is another, older font format.</p>
+
+</Invert>
+
+---
 
 ```css
-body {
-    font-display: swap;
+.target {
+    --wght: "wght" 900;
+    font-variation-settings: var(--wght);
 }
 ```
 
-## Heck yeah!
+```js
+target
+    .style
+    .setProperty(
+        '--wght',
+        '"wght" 700',
+    );
+```
+
+---
+
+<IssuuLogo />
+
+<VariableHeadline uppercase>Variable fonts</VariableHeadline>
+
+---
+
+<IssuuLogo />
+
+<iframe
+    width="100%"
+    src="https://www.recursive.design/"
+    frameborder="0"
+    style="height: 80vh; margin-top: 20vh;"
+    scrolling="yes"
+></iframe>
