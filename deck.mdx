@@ -1,4 +1,4 @@
-import { Invert, FullScreenCode } from 'mdx-deck';
+import { Head, Invert, Appear, Image } from 'mdx-deck';
 import { prism } from '@mdx-deck/themes';
 
 import issuu from './theme';
@@ -8,9 +8,14 @@ import VariableHeadline from './components/variable-headline.jsx';
 
 export const themes = [issuu, prism];
 
+<Head>
+  <title>Variable fonts</title>
+  <link rel="icon" type="image/x-icon" href="./favicon.ico"/>
+</Head>
+
 <IssuuLogo />
 
-<h1 style="text-transform: uppercase;">Variable fonts</h1>
+# VARIABLE FONTS
 
 ---
 
@@ -20,7 +25,7 @@ export const themes = [issuu, prism];
 
 # What is it?
 
-<p style="text-align: center; padding: 0 2rem;"><strong>OpenType variable fonts</strong> are an extension to the OpenType specification, introduced in OpenType 1.8.</p>
+**OpenType variable fonts** are an extension to the OpenType specification, introduced in OpenType 1.8.
 
 </Invert>
 
@@ -32,27 +37,75 @@ export const themes = [issuu, prism];
 
 # What the heck is OpenType?
 
-<p style="text-align: center; padding: 0 2rem;"><strong>OpenType</strong> is a format for scalable computer fonts. It was built on its predecessor TrueType, which is another, older font format.</p>
+**OpenType** is a format for scalable computer fonts. It was built on TrueType, which is another, older font format.
 
 </Invert>
 
 ---
 
-```css
-.target {
-    --wght: "wght" 900;
-    font-variation-settings: var(--wght);
-}
-```
+<IssuuLogo />
 
-```js
-target
-    .style
-    .setProperty(
-        '--wght',
-        '"wght" 700',
-    );
-```
+# A new way of creating fonts
+
+## And using them
+
+---
+
+<IssuuLogo />
+
+# The old way
+
+One master and file per font variation: **weight**, <span style="font-variation-settings: 'wdth' 85; letter-spacing: -1px;">width</span>, _italic_, etc.
+
+---
+
+<Invert>
+
+<IssuuLogo inverted />
+
+# The new way
+
+<Appear>
+
+## THE MATRIX
+
+</Appear>
+
+</Invert>
+
+---
+
+<Image src="https://i.imgur.com/igOKgzq.png" size="contain">
+
+<small style="position: absolute; right: 2rem; bottom: 2rem; font-size: .75rem;">
+  © Microsoft
+</small>
+
+</Image>
+
+---
+
+<Image src="https://i.imgur.com/pO4trHB.jpg" size="contain">
+
+<small style="position: absolute; right: 2rem; bottom: 2rem; font-size: .75rem;">
+  Noordzij Cube, Gerrit Noordzij, The Stroke of the Pen, 2009, © Hyphen Press.
+</small>
+
+</Image>
+
+---
+
+<IssuuLogo />
+
+# Benefits
+
+<ul>
+  <Appear>
+    <li>One file, one HTTP request</li>
+    <li>Responsive typography</li>
+    <li>Increased design freedom</li>
+  </Appear>
+</ul>
 
 ---
 
@@ -62,12 +115,32 @@ target
 
 ---
 
-<IssuuLogo />
+<IssuuLogo block />
 
 <iframe
-    width="100%"
-    src="https://www.recursive.design/"
-    frameborder="0"
-    style="height: 80vh; margin-top: 20vh;"
-    scrolling="yes"
+  width="100%"
+  height="100%"
+  src="https://www.recursive.design/"
+  frameborder="0"
+  scrolling="yes"
 ></iframe>
+
+---
+
+<IssuuLogo />
+
+## Support is (mostly) here
+
+<img src="https://i.imgur.com/UsP9FWh.png" />
+
+---
+
+<IssuuLogo/>
+
+# Resources
+
+[Introducing OpenType Variable Fonts](https://medium.com/variable-fonts/https-medium-com-tiro-introducing-opentype-variable-fonts-12ba6cd2369)  
+[Variable Fonts for Responsive Design](https://alistapart.com/blog/post/variable-fonts-for-responsive-design/)  
+[Variable Fonts spec](https://docs.microsoft.com/en-us/typography/opentype/spec/otvaroverview)  
+[Axis Praxis](https://www.axis-praxis.org/)  
+[v-fonts.com](https://v-fonts.com/)  

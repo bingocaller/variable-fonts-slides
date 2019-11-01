@@ -1,13 +1,24 @@
 import React from 'react';
 
-export default function IssuuLogo({ inverted }) {
-    return (
+export default function IssuuLogo({ inverted, block }) {
+    const staticStyles = {
+        position: 'relative',
+        width: '100%',
+        padding: '2rem',
+        boxShadow: '0px 2px 9px rgba(0, 0, 0, 0.2)',
+    };
+    const absoluteStyles = {
+        position: 'absolute',
+        top: '2rem',
+        left: '2rem',
+    };
+    const styles = block ? {} : absoluteStyles;
+    const icon = (
         <svg
             style={{
-                position: 'absolute',
-                top: '2rem',
-                left: '2rem',
+                display: 'block',
                 width: '5vw',
+                ...styles,
             }}
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 128 128"
@@ -27,4 +38,5 @@ export default function IssuuLogo({ inverted }) {
             </g>
         </svg>
     );
+    return block ? <div style={staticStyles}>{icon}</div> : icon;
 };
