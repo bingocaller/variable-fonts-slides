@@ -5,7 +5,7 @@ const MAX_FONT_WEIGHT = 700;
 const MIN_FONT_WIDTH = 85;
 const MAX_FONT_WIDTH = 100;
 
-function VariableHeadline({ uppercase, children, style, ...props }) {
+function VariableHeadline({ code, uppercase, children, style, ...props }) {
     const [fontWeight, setFontWeight] = useState(MAX_FONT_WEIGHT);
     const [fontWidth, setFontWidth] = useState(MAX_FONT_WIDTH);
     const [countingUpWeight, setCountingUpWeight] = useState(true)
@@ -58,13 +58,13 @@ function VariableHeadline({ uppercase, children, style, ...props }) {
             <h1 style={styles} {...props}>
                 {children}
             </h1>
-            <code style={{
+            { code && <code style={{
                 textAlign: 'center',
                 padding: '0 2rem',
                 fontFamily:'"Fira Code", "Roboto Mono", monospace',
             }}>
                 font-variation-settings:<br/>{`"wght" ${fontWeight}, "wdth" ${fontWidth}`};
-            </code>
+            </code>}
         </>
     );
 }
